@@ -1,8 +1,12 @@
 import React from 'react'
+import Login from '../login/Login'
 
 const Home:React.FC = () => {
   return (
-    <div className=' container text-3xl font-bold text-center text-black bg-white p-10 dark:text-white '>Home Route from dev branch </div>
+    <div className=' text-black bg-white p-10 dark:text-white '>
+        <div className=' container '>Home Route from dev branch </div>
+        <Login />
+    </div>
   )
 }
 
