@@ -1,13 +1,16 @@
 import './App.css'
+import { HashRouter, Routes, Route } from 'react-router-dom'
+import Home from './components/home/Home'
+import { paths } from './utilities/paths'
 
 function App() {
 
   return (
-    <>
-      <div className=' container mx-auto text-xl'>
-        hello
-      </div>
-    </>
+    <HashRouter>
+      <Routes>
+        <Route path={paths.home} Component={Home}/>
+      </Routes>
+    </HashRouter>
   )
 }
 
