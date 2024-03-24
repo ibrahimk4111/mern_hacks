@@ -1,13 +1,14 @@
-import React from 'react'
-import Login from '../login/Login'
+import React from "react";
+import Login from "../login/Login";
+import Header from "../header/Header";
 
-const Home:React.FC = () => {
+const Home: React.FC = () => {
   return (
-    <div className=' text-black bg-white p-10 dark:text-white '>
-        <div className=' container '>Home Route from dev branch </div>
-        <Login />
-    </div>
-  )
-}
+    <>
+      <Header />
+      <Login />
+    </>
+  );
+};
 
-export default Home
+export default Home;

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Login:React.FC = () => {
   return (
-    <div>Login page</div>
+    <div className=' container'>Login page</div>
   )
 }
 
