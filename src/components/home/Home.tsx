@@ -1,10 +1,15 @@
 import React from "react";
-import Login from "../login/Login";
+import NavBar from "../navbar/NavBar";
 
 const Home: React.FC = () => {
   return (
     <>
-      <Login />
+      <div className=" flex ">
+        <NavBar/>
+        <div className=" h-[100vh] bg-red-100 w-full">
+          hello
+        </div>
+      </div>
     </>
   );
 };

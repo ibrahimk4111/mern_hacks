@@ -48,7 +48,7 @@ const Register:React.FC = () => {
 
 
   return (
-    <div className=" container mt-10 flex justify-center items-center">
+    <div className=" container mt-5 flex justify-center items-center">
       <div className=" bg-white rounded-md lg:3/12 lg:w-4/12 md:w-5/12 w-full lg:p-10 p-5">
         <h1 className=" uppercase font-bold text-2xl text-center text-orange-300"> Sign Up </h1>
         <hr className=" h-1 mt-3 mb-10"/>
@@ -95,7 +95,7 @@ const Register:React.FC = () => {
             />
             <Button className=" bg-slate-600" type="submit">Sign Up</Button>
             <p className=" text-slate-300 text-center">or</p>
-            <p className=" text-center">Already have an account? <Link to={paths.auth.register} className=" text-orange-300">Sign In</Link></p>
+            <p className=" text-center">Already have an account? <Link to={paths.auth.login} className=" text-orange-300">Sign In</Link></p>
           </form>
         </Form>
       </div>
