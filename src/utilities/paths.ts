@@ -1,8 +1,8 @@
 export const paths = {
   auth: {
-    login: "login",
-    register: "register",
-    forget: "forget",
+    login: "/login",
+    register: "/register",
+    forget: "/forget",
   },
   home: "/",
 };
