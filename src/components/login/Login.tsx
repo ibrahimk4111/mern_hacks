@@ -42,7 +42,7 @@ const Login: React.FC = () => {
 
   return (
     <div className=" container mt-10 flex justify-center items-center">
-      <div className=" bg-white rounded-md lg:w-1/4 md:w-1/2 w-full p-5">
+      <div className=" bg-white rounded-md lg:3/12 lg:w-4/12 md:w-5/12 w-full p-5">
         <h1 className=" uppercase font-bold text-2xl text-center text-orange-300"> Sign In </h1>
         <hr className=" h-1 mt-3 mb-10"/>
         <Form {...form}>
@@ -54,7 +54,7 @@ const Login: React.FC = () => {
                 <FormItem>
                   <FormLabel className=" text-slate-500">Username</FormLabel>
                   <FormControl>
-                    <Input placeholder="Username" {...field} />
+                    <Input autoComplete="username" placeholder="Username" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -67,16 +67,16 @@ const Login: React.FC = () => {
                 <FormItem>
                   <FormLabel className=" text-slate-500">Password</FormLabel>
                   <FormControl>
-                    <Input type="password" placeholder="Password" {...field} />
+                    <Input autoComplete="current-password" type="password" placeholder="Password" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <Link to={paths.login} className=" text-right text-orange-500"> Forget Password?</Link>
-            <Button className=" bg-slate-600" type="submit">Submit</Button>
+            <Link to={paths.auth.login} className=" text-right text-orange-300"> Forget Password?</Link>
+            <Button className=" bg-slate-600" type="submit">Sign In</Button>
             <p className=" text-slate-300 text-center">or</p>
-            <p className=" text-center">Don't have any Account? <Link to={paths.register} className=" text-orange-500">Register</Link></p>
+            <p className=" text-center">Don't have any Account? <Link to={paths.auth.register} className=" text-orange-300">Register</Link></p>
           </form>
         </Form>
       </div>
