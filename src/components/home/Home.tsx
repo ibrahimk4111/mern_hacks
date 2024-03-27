@@ -11,7 +11,6 @@ const Home: React.FC = () => {
           <div className=" h-[100vh] w-full rounded-md">
             <DataTable />
           </div>
-          <div className=" h-[100vh] bg-red-500 w-full rounded-md p-2">hello1</div>
         </div>
       </div>
     </>
