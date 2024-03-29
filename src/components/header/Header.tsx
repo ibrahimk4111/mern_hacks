@@ -1,4 +1,4 @@
-import { paths } from '@/utilities/paths'
+import { paths } from '@/lib/paths'
 import React from 'react'
 import { Link } from 'react-router-dom'
 

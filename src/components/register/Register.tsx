@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "../ui/input";
 import { Link } from "react-router-dom";
-import { paths } from "@/utilities/paths";
+import { paths } from "@/lib/paths";
 
 const formSchema = z.object({
     email: z.string().min(6, {
