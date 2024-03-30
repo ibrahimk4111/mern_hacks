@@ -5,6 +5,7 @@ import { paths } from './lib/paths'
 import Login from './components/login/Login'
 import Header from './components/header/Header'
 import Register from './components/register/Register'
+import { Toaster } from "@/components/ui/toaster"
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path={paths.auth.login} Component={Login}/>
         <Route path={paths.auth.register} Component={Register}/>
       </Routes>
+      <Toaster />
     </HashRouter>
   )
 }

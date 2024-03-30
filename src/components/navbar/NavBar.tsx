@@ -1,7 +1,6 @@
 import { BsArrowRightSquareFill, BsArrowLeftSquareFill } from "react-icons/bs";
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import TableShemaDialog from "../tableSchema/TableShemaDialog";
+import SidebarItem from "./SidebarItem";
 
 const NavBar: React.FC = () => {
   const [expanded, setExpanded] = useState<boolean>(true);
@@ -58,37 +57,3 @@ const NavBar: React.FC = () => {
 };
 export default NavBar;
 
-interface SidebarItemType {
-  text: string;
-  extended: boolean;
-}
-
-function SidebarItem({ text, extended }: SidebarItemType) {
-  const addData = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    const target = e.target as HTMLElement;
-    if (target) {
-      const text = target.getAttribute("title");
-      console.log(text);
-    }
-  };
-
-  return (
-    <li className=" flex items-center justify-between p-2 bg-slate-200 rounded-md">
-      <Link
-        to="#"
-        className={`h-[3vh] hover:text-orange-500 overflow-hidden transition-all duration-500 ease-in-out ${
-          extended ? " w-52" : "w-4"
-        }`}
-      >
-        {extended ? text : text.split("")[0]}
-      </Link>
-      <button
-        title={text}
-        onClick={addData}
-        className="ml-2 px-2 bg-orange-300 hover:bg-orange-500 text-white text-xl rounded-md "
-      >
-        <TableShemaDialog />
-      </button>
-    </li>
-  );
-}
