@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { ImBin } from "react-icons/im";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 // import { useNavigate } from "react-router-dom";
 
 interface propsType {
@@ -13,7 +13,7 @@ interface statePropsType {
 }
 interface formDataType {
   id: string;
-  Name?: string;
+  Name: string;
   URL?: string;
   Description?: string;
   Rating?: string;
@@ -67,7 +67,7 @@ const TableSchema = ({ title }: propsType) => {
       | React.ChangeEvent<HTMLInputElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prevState:formDataType) => ({
+    setFormData((prevState: formDataType) => ({
       ...prevState,
       [name]: value,
     }));
@@ -77,6 +77,14 @@ const TableSchema = ({ title }: propsType) => {
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     e.preventDefault();
+    const requiredData = formData["Name"].trim().length < 1;
+    if (requiredData) {
+      toast({
+        description: `Please fill the 'Name' field.`,
+      });
+    } else {
+      console.log(formData);
+    }
   };
 
   return (
@@ -115,7 +123,7 @@ const TableSchema = ({ title }: propsType) => {
         <section className=" h-full lg:col-span-9 col-span-12 border-2 p-3 rounded-md">
           <h1 className=" uppercase font-semibold ">Table Column's Inputs</h1>
           <hr className=" h-1 mb-5" />
-          <form className=" space-y-3">
+          <form action="submit" className=" space-y-3">
             {columns.map((item, index) => (
               <div key={index} className=" flex flex-col gap-1">
                 <p className=" flex justify-between items-center">
