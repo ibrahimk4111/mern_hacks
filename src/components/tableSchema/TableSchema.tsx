@@ -25,7 +25,7 @@ const TableSchema = ({ title }: propsType) => {
   const [columns, setColumns] = useState<statePropsType[]>([
     { id: 1, name: "Name" },
   ]);
-  const [formData, setFormData] = useState<formDataType | any>({
+  const [formData, setFormData] = useState<formDataType>({
     id: uuidv4(),
     Name: "",
     URL: "",
@@ -142,7 +142,7 @@ const TableSchema = ({ title }: propsType) => {
                     name={item.name}
                     value={formData[item.name]}
                     onChange={handleInputChange}
-                    rows={5}
+                    rows={2}
                     className="border-2 focus-visible:outline-none rounded-md p-2"
                   />
                 ) : (
