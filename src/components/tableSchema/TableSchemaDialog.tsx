@@ -1,7 +1,6 @@
 import {
   Dialog,
   DialogContent,
-  DialogFooter,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import TableSchema from "./TableSchema";
